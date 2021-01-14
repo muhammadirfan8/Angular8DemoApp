@@ -1,0 +1,38 @@
+$primary: #2A2D3E;
+$light-primary: #555865;
+$secondary: #AAABB2;
+$light-secondary: #DFE0E2;
+$light-border: #F4F4F5;
+$contrast-primary : #2BBFE6;
+$pure-white: #FFFFFF;
+$success-color: #16E676;
+$danger-color: #F44337;
+$contrast-dark-primary: #008FB3;
+
+$designer-border-width: 5px;
+$designer-border: $designer-border-width solid $light-secondary;
+
+$resize-handle-size: 8px;
+$resize-handle-offset: 6px;
+$resize-handle-border-width: 1px;
+
+$top-menu-highlight-border: $designer-border-width solid $contrast-primary;
+$transparent-menu-border: $designer-border-width solid transparent;
+
+$font-size-lg: 14pt;
+$font-size-sm: 13pt;
+$font-size-xs: 12pt;
+$font-size-mn: 10pt;
+$large-icon-size: 35pt;
+
+$letter-spacing-wide: 0.75;
+$letter-spacing-medium: 0.75;
+$letter-spacing-small: 0.6;
+
+@function set-text-color-for-background($color) {
+  @if (lightness($color) > 50) {
+    @return $primary; // Lighter backgorund, return dark color
+  } @else {
+    @return $pure-white; // Darker background, return light color
+  }
+}

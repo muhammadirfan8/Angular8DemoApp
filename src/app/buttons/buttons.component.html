@@ -1,0 +1,250 @@
+<mat-card>
+    <div fxLayout="row">
+        <div fxLayout="column" fxFlex="0 0 30">
+                <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+                          <p>Default Button</p>
+                          <kendo-splitbutton (buttonClick)="onPaste()" [data]="data" [icon]="paste">
+                              Paste
+                          </kendo-splitbutton>
+                        </div>
+              
+                        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+                          <p>Flat Button</p>
+                          <kendo-splitbutton (buttonClick)="onPaste()" [data]="data" [icon]="paste" [look]="'flat'">
+                              Paste
+                          </kendo-splitbutton>
+                        </div>
+              
+                        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+                          <p>Outline Button</p>
+                          <kendo-splitbutton (buttonClick)="onPaste()" [data]="data" [icon]="paste" [look]="'outline'">
+                              Paste
+                          </kendo-splitbutton>
+                        </div>
+                      </div>
+        </div>
+   
+    <div fxLayout="column">
+<h1>Basic Usage</h1>
+<div class="example-wrapper">
+    <div class="example-col">
+      <p>Button</p>
+      <button kendoButton (click)="onButtonClick()">Default</button>
+      <button kendoButton (click)="onButtonClick()" [primary]="true">Primary</button>
+      <button kendoButton (click)="onButtonClick()" [disabled]="true">Disabled</button>
+    </div>
+    <div class="example-col">
+      <p>ButtonGroup</p>
+      <kendo-buttongroup>
+        <button kendoButton [toggleable]="true">
+          Option A
+        </button>
+        <button kendoButton [toggleable]="true">
+          Option B
+        </button>
+        <button kendoButton [toggleable]="true">
+          Option C
+        </button>
+      </kendo-buttongroup>
+    </div>
+    <div class="example-col">
+        <p>DropDownButton</p>
+        <kendo-dropdownbutton
+            [data]="dropDownButtonItems"
+            [icon]="'cog'"
+            (itemClick)="onSplitButtonItemClick($event)">
+            User Settings
+        </kendo-dropdownbutton>
+    </div>
+    <div class="example-col">
+        <p>SplitButton</p>
+        <kendo-splitbutton
+            [data]="splitButtonItems"
+            [icon]="'paste'"
+            (itemClick)="onSplitButtonItemClick($event)"
+            (buttonClick)="onSplitButtonClick()">
+            Paste
+        </kendo-splitbutton>
+    </div>
+    <div class="example-col">
+        <p>Chip</p>
+        <kendo-chip-list [selection]="'multiple'">
+            <kendo-chip
+                *ngFor="let chip of chips"
+                [label]="chip.label"
+                [iconClass]="chip.iconClass"
+            ></kendo-chip>
+        </kendo-chip-list>
+    </div>
+</div>
+</div>
+</div>
+</mat-card>
+
+<mat-card>
+    <div fxLayout="row">
+        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+          <p>Default Button</p>
+          <p class="k-block">
+              <kendo-dropdownbutton [data]="data">
+                  User Settings
+              </kendo-dropdownbutton>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+          <p>Primary Button</p>
+          <p class="k-block">
+              <kendo-dropdownbutton [data]="data" [primary]="true">
+                  User Settings
+              </kendo-dropdownbutton>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+          <p>Outline Button</p>
+          <p class="k-block">
+              <kendo-dropdownbutton [data]="data" [look]="'outline'">
+                  User Settings
+              </kendo-dropdownbutton>
+          </p>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-lg-3 example-col">
+          <p>Bare Button</p>
+          <p class="k-block">
+              <kendo-dropdownbutton [data]="data" [look]="'bare'">
+                  User Settings
+              </kendo-dropdownbutton>
+          </p>
+        </div>
+      </div>
+</mat-card>
+
+<mat-card>
+    <h1>MatButton</h1>
+    <section>
+        <div class="example-label">Basic</div>
+        <div class="example-button-row">
+          <button mat-button>Basic</button>
+          <button mat-button color="primary">Primary</button>
+          <button mat-button color="accent">Accent</button>
+          <button mat-button color="warn">Warn</button>
+          <button mat-button disabled>Disabled</button>
+          <a mat-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Raised</div>
+        <div class="example-button-row">
+          <button mat-raised-button>Basic</button>
+          <button mat-raised-button color="primary">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled>Disabled</button>
+          <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Stroked</div>
+        <div class="example-button-row">
+          <button mat-stroked-button>Basic</button>
+          <button mat-stroked-button color="primary">Primary</button>
+          <button mat-stroked-button color="accent">Accent</button>
+          <button mat-stroked-button color="warn">Warn</button>
+          <button mat-stroked-button disabled>Disabled</button>
+          <a mat-stroked-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Flat</div>
+        <div class="example-button-row">
+          <button mat-flat-button>Basic</button>
+          <button mat-flat-button color="primary">Primary</button>
+          <button mat-flat-button color="accent">Accent</button>
+          <button mat-flat-button color="warn">Warn</button>
+          <button mat-flat-button disabled>Disabled</button>
+          <a mat-flat-button href="https://www.google.com/" target="_blank">Link</a>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Icon</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <button mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <button mat-icon-button color="primary" aria-label="Example icon button with a home icon">
+              <mat-icon>home</mat-icon>
+            </button>
+            <button mat-icon-button color="accent" aria-label="Example icon button with a menu icon">
+              <mat-icon>menu</mat-icon>
+            </button>
+            <button mat-icon-button color="warn" aria-label="Example icon button with a heart icon">
+              <mat-icon>favorite</mat-icon>
+            </button>
+            <button mat-icon-button disabled aria-label="Example icon button with a open in new tab icon">
+              <mat-icon>open_in_new</mat-icon>
+            </button>
+          </div>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">FAB</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                <mat-icon>bookmark</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-fab disabled aria-label="Example icon button with a heart icon">
+                <mat-icon>favorite</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <mat-divider></mat-divider>
+      <section>
+        <div class="example-label">Mini FAB</div>
+        <div class="example-button-row">
+          <div class="example-flex-container">
+            <div class="example-button-container">
+              <button mat-mini-fab color="primary" aria-label="Example icon button with a menu icon">
+                <mat-icon>menu</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
+                <mat-icon>plus_one</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab color="warn" aria-label="Example icon button with a filter list icon">
+                <mat-icon>filter_list</mat-icon>
+              </button>
+            </div>
+            <div class="example-button-container">
+              <button mat-mini-fab disabled aria-label="Example icon button with a home icon">
+                <mat-icon>home</mat-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+</mat-card>

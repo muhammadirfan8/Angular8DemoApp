@@ -1,1 +1,69 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500');
+
+//TODO: Need to find a way to import this globally
+@import "themes/variables.scss";
+
+// Apply our theme colors to Kendo UI
+$series-e: $contrast-primary;
+//$primary: $contrast-primary;
+$accent: $contrast-primary;
+$success: $success-color;
+$error: $danger-color;
+$text-color: $primary;
+$bg-color: $pure-white;
+$base-text: $primary;
+$base-bg: $pure-white;
+$selected-text: $primary;
+$selected-bg: $contrast-primary;
+@import '~@progress/kendo-theme-default/scss/all';
+
+body{
+    margin:0;
+    padding:0;
+}
+.conatiner{
+    margin:10px;
+}
+li.active{
+    background:#f00;
+    color:#fff;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    width: 490px;
+  }
+  
+  .example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
+    display: flex;
+    justify-content: center;
+    //width: 120px;
+  }
+  mat-card{
+      margin-bottom:10px;
+  }
